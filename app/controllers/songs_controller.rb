@@ -31,6 +31,7 @@ class SongsController < ApplicationController
     else
       redirect_to songs_path, alert: "Not allowed to create songs."
     end
+
   end
 
   def create
@@ -72,4 +73,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
